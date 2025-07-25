@@ -8,6 +8,7 @@ import Logo from './logo';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
+import { ThemeSwitcher } from './theme-switcher';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -51,6 +52,7 @@ export default function Header() {
           <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
             <Link href="/contact">Start Here</Link>
           </Button>
+          <ThemeSwitcher />
         </div>
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -62,9 +64,12 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="left">
               <div className="flex flex-col gap-6 p-6">
-                <Link href="/" onClick={() => setIsOpen(false)}>
-                  <Logo />
-                </Link>
+                <div className="flex justify-between items-center">
+                   <Link href="/" onClick={() => setIsOpen(false)}>
+                    <Logo />
+                  </Link>
+                  <ThemeSwitcher />
+                </div>
                 <nav className="flex flex-col gap-4">
                   {navLinks.map((link) => (
                     <Link
