@@ -70,12 +70,12 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <section className="py-20 sm:py-32 bg-secondary">
+      <section className="py-20 sm:py-32 bg-primary">
         <Container className="text-center">
           <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground tracking-tight">
             Expert Financial Guidance for Your Business
           </h1>
-          <p className="mt-6 text-lg sm:text-xl max-w-3xl mx-auto text-secondary-foreground">
+          <p className="mt-6 text-lg sm:text-xl max-w-3xl mx-auto text-primary-foreground/90">
             We provide comprehensive accounting and advisory services tailored to
             your needs, helping you achieve financial clarity and success.
           </p>
